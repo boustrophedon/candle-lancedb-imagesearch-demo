@@ -1,0 +1,21 @@
+[package]
+name = "candle-lancedb-imagesearch"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.82"
+candle-core = { git = "https://github.com/huggingface/candle.git", features = ["cuda"] }
+
+candle-nn = { git = "https://github.com/huggingface/candle.git" }
+candle-transformers = { git = "https://github.com/huggingface/candle.git" }
+hf-hub = { version = "0.3.2", features = ["tokio"] }
+image = "0.25.1"
+tokenizers = "0.15.2"
+
+lancedb = "^0.4"
+
+tokio = { version = "^1", features = ["full",] }
+futures = "0.3.30"
